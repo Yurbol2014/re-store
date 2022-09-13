@@ -1,8 +1,5 @@
-import React from "react"
-import { Link } from "react-router-dom";
-import './shop-header.css'
 
 
-const ShopHeader = () =>{
+import ShopHeader from './shop-header';
 
-}
+export default ShopHeader;
