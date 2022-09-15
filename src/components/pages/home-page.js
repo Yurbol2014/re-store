@@ -1,8 +1,8 @@
 import React from "react";
 import {BookstoreService} from '../../services/bookstore-service'
-import { useNavigate } from 'react-router-dom';
-import BookList from "../book-list";
 
+import BookList from "../book-list";
+import ShoppingCarrTable from "../shopping-cart-table";
 
 const HomePage = () => {
 
@@ -11,7 +11,10 @@ const HomePage = () => {
 
 
    return( 
+      <div>
      <BookList/>
+     <ShoppingCarrTable/>
+     </div>
    )
 
 }
