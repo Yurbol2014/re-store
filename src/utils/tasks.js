@@ -1,9 +1,7 @@
-function arithmetic(a, b, operator){
+function otherAngle(a, b) {
+
+  let thirdCorner = 180 - (a+b)
   
-   let add = ((operator=='add') ? a+b : (operator=='subtract'? a-b : (operator=='multiply'? a*b : (operator=='divide'? a/b : false)))) 
-
-  return add
-
+   return thirdCorner
  }
- 
- arithmetic(5, 2, "divide" )
+ otherAngle(45, 45)
