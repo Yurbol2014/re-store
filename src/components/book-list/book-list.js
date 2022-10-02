@@ -9,6 +9,7 @@ import "../book-list/book-list.css";
 import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 
+
 const BookList = ({ books, onAddedToCart }) => {
    return (
       <ul className="book-list">
@@ -44,7 +45,7 @@ class BookListContainer extends Component {
 
 
 
-const mapStateToProps = ({ books, loading, error }) => {
+const mapStateToProps = ({bookList:{ books, loading, error }}) => {
   return { books, loading, error };
 };
 
