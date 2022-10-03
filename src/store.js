@@ -1,9 +1,9 @@
 import {createStore, applyMiddleware} from 'redux';
-
+import  thunkMiddleware  from 'redux-thunk';
 import reducer from './reducers';
 
-const logMiddleware =(getState)=>(next) => (action)=>{
-   console.log(action.type, getState());
+const logMiddleware =(store)=>(next) => (action)=>{
+   console.log(action.type, store.getState());
    return next(action)
 }
 
@@ -21,10 +21,22 @@ const stringMiddleware = () => (next) => (action) =>{
 
 
 
-const store = createStore(reducer, applyMiddleware(stringMiddleware,logMiddleware));
+const store = createStore(reducer, applyMiddleware(thunkMiddleware, stringMiddleware,logMiddleware));
 
 
 
-store.dispatch('HELLO_WORDL')
+const myAction = (dispatch) => {
+   setTimeout(()=> dispatch({
+      type: 'DELAYED_ACTION'
+   }), 2000)
+}
+
+const delayedActionCreator = (timeout) => (dispatch) => {
+   setTimeout(()=> dispatch({
+      type: 'DELAYED_ACTION'
+   }), timeout)
+}
+
+store.dispatch(delayedActionCreator(3000));
 
 export default store;

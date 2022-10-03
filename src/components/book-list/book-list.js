@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { bindActionCreators } from "redux";
 import BookListItem from "../book-list-item";
 import { compose } from "../../utils";
 import { connect } from "react-redux";
@@ -50,10 +50,10 @@ const mapStateToProps = ({bookList:{ books, loading, error }}) => {
 };
 
 const mapDispatchToProps = (dispatch, { bookstoreService }) => {
-  return {
-    fetchBooks: fetchBooks(bookstoreService, dispatch),
-    onAddedToCart: (id) => dispatch(bookAddedToCart(id))
-  };
+  return bindActionCreators({
+    fetchBooks: fetchBooks(bookstoreService),
+    onAddedToCart: bookAddedToCart
+  }, dispatch);
 };
 
 export default compose(
