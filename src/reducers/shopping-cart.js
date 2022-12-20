@@ -1,5 +1,5 @@
 
-const updateCartItems = (cartItems, item, idx,orderTotal) => {
+const updateCartItems = (cartItems, item, idx) => {
    if (item.count === 0) {
      return [
        ...cartItems.slice(0, idx), //удаляет элементы из массива
@@ -8,10 +8,7 @@ const updateCartItems = (cartItems, item, idx,orderTotal) => {
      ];
      
    }
-   //if (item.count === 0) {
-   //   return {
-   //      orderTotal:0
-   //   }}
+  
    
    
  
@@ -43,20 +40,22 @@ const updateCartItems = (cartItems, item, idx,orderTotal) => {
  
    const book = books.find(({ id }) => id === bookId);
    const itemIndex = cartItems.findIndex(({ id }) => id === bookId);
-   //console.log(itemIndex);
+   
    const item = cartItems[itemIndex];
   
   
  
    const newItem = updateCartItem(book, item, quantity);
+
+   const newCartItems = updateCartItems(cartItems, newItem, itemIndex)
    
-   const totalOrder = state.shoppingCart.cartItems.reduce((item,index)=>  item + index.total ,0)
+   const totalOrder = newCartItems.reduce((accum,item)=>  accum + item.total ,0)
    console.log(totalOrder);
    
    return {
-      ...state,
+     
      orderTotal:  totalOrder,
-     cartItems: updateCartItems(cartItems, newItem, itemIndex),
+     cartItems: newCartItems  //updateCartItems(cartItems, newItem, itemIndex),
    };
  };
  
@@ -71,8 +70,7 @@ const updateCartItems = (cartItems, item, idx,orderTotal) => {
    }
     switch (action.type) {
      case "BOOK_ADDED_TO_CART":
-      //const totalOrder= state.shoppingCart.cartItems.map(({total,i})=>total=+total);
-      // console.log(totalOrder);
+    
        return updateOrder(state, action.payload, 1);
        
 
