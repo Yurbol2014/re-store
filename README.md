@@ -1,3 +1,40 @@
+# Приложение: ReStore это пример элемента интернет-магазина (Корзина)
+
+	
+<img src="https://github.com/Yurbol2014/img/blob/main/TODO-LIST.png" alt="Todo-list изображение">
+
+### Используемые технологии: React,Redux,JS,CSS,HTML
+### Что из React и Redux применял:
+### "React и Redux Элементы" ,
+### "React B Redux Компоненты",
+### "Отправка действий в Redux Store (action dispatch)",
+### "Работа с асинхронными данными",
+### "Обработка ошибок",
+### "Обновление элементов в массиве",
+### "Организация кода reducer'а",
+### "Store Enhancers"
+###  "Middleware"
+
+## Deploy ПРОЕКТА
+
+### https://re-store-sandy.vercel.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
