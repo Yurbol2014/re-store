@@ -30,11 +30,13 @@ const ShopHeader = ({ numItems,total }) => {
   );
 };
 
-const mapStateToProps = ({shoppingCart: {cartItems, orderTotal}}) =>{
+const mapStateToProps = ({shoppingCart: {cartItems, orderTotal,cartCount}}) =>{
  
    return {
+      
       items: cartItems,
-      total: orderTotal
+      total: orderTotal,
+      numItems: cartCount
 
    }
 

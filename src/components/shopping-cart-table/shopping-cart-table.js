@@ -71,7 +71,8 @@ const mapStateToProps = ({shoppingCart: {cartItems, orderTotal}}) =>{
  
    return {
       items: cartItems,
-      total: orderTotal
+      total: orderTotal,
+      
 
    }
 
