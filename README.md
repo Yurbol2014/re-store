@@ -1,7 +1,7 @@
 # Приложение: ReStore это пример элемента интернет-магазина (Корзина)
 
 	
-<img src="https://github.com/Yurbol2014/img/blob/main/TODO-LIST.png" alt="Todo-list изображение">
+<img src="https://github.com/Yurbol2014/img/blob/main/re-store.png" alt="Todo-list изображение">
 
 ### Используемые технологии: React,Redux,JS,CSS,HTML
 ### Что из React и Redux применял:
