@@ -4,6 +4,8 @@ import { withBookstoreService } from "../hoc";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { CartPage, HomePage } from "../pages";
 import ShopHeader from "../shop-header";
+import { Provider } from "react-redux";
+
 
 
 const App = () => {

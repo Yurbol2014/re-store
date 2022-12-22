@@ -14,6 +14,7 @@ import { connect } from "react-redux";
 const ShoppingCartTable = ({items, total,onIncrease, onDecrease, onDelete}) => {
    const renderRow = (item,idx) => {
       const {id, title, count,total} = item;
+      
       return(
        <tr key={id}>
        <td>{idx + 1}</td>
@@ -60,6 +61,7 @@ const ShoppingCartTable = ({items, total,onIncrease, onDecrease, onDelete}) => {
       </table>
       <div className="total">
         Total: ${total}
+        
       </div>
     </div>
   );
@@ -74,6 +76,7 @@ const mapStateToProps = ({shoppingCart: {cartItems, orderTotal}}) =>{
    }
 
 }
+
 
  const mapDispatchToProps = {
   

@@ -30,8 +30,10 @@ const updateCartItems = (cartItems, item, idx) => {
      
    };
  };
+
+
  
- const updateOrder = (state, bookId, quantity) => {
+ export const updateOrder = (state, bookId, quantity) => {
    const {
      bookList: { books },
      shoppingCart: { cartItems },
@@ -50,7 +52,7 @@ const updateCartItems = (cartItems, item, idx) => {
    const newCartItems = updateCartItems(cartItems, newItem, itemIndex)
    
    const totalOrder = newCartItems.reduce((accum,item)=>  accum + item.total ,0)
-   console.log(totalOrder);
+  
    
    return {
      
@@ -87,6 +89,8 @@ const updateCartItems = (cartItems, item, idx) => {
        return state.shoppingCart;
    }
  }
- export default updateShoppingCart;
+ 
+ export default 
+   updateShoppingCart;
 
  
